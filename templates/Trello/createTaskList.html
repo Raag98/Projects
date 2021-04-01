@@ -1,0 +1,22 @@
+{% extends 'Trello/base.html' %}
+
+{% block title %}
+Trello App | Create TaskList
+{% endblock %}
+
+
+{% block content %}
+<center>
+    <h1>
+        <u> Trello App</u> | <u> New TaskList</u>
+    </h1>
+</center>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ list.as_p }}
+    <input type="submit" value="Add TaskList">
+</form>
+
+
+{% endblock %}

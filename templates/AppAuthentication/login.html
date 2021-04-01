@@ -1,0 +1,27 @@
+{% extends 'AppAuthentication/base.html' %}
+
+{% block title %}
+Trello App | LogIn
+{% endblock %}
+
+
+{% block content %}
+<div class="login-page">
+    <div class="form-login">
+        <span class="title"> Trello | LogIn </span>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="Enter Username">
+            <input type="password" name="password" placeholder="Enter Password">
+            <input type="submit" value="Login" class="btn">
+            <p class="bottom-message">Not Registered? <a href="{% url 'register' %}"> Register </a></p>
+            {% for msg in messages %}
+                <p class="bottom-message">{{ msg }} </p>
+            {% endfor %}
+        </form>
+    </div>
+</div>
+
+
+
+{% endblock %}

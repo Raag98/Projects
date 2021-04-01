@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-size: cover;
+    font-family: sans-serif;
+}
+
+.login-page {
+    background: -webkit-linear-gradient(bottom, #005bea, #00c6fb);
+    position: absolute;
+    opacity: 0.9;
+    display: block;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.register-page {
+    background: -webkit-linear-gradient(bottom, #005bea, #00c6fb);
+    position: absolute;
+    opacity: 0.9;
+    display: block;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.title {
+    font-size: 30px;
+    color: #fff;
+    line-height: 1.2;
+    text-align: center;
+    width: 100%;
+    display: block;
+    padding-bottom: 35px;
+}
+
+.form-login {
+    z-index: 1;
+    background: #000;
+    max-width: 360px;
+    margin: 10% auto 100px;
+    padding: 45px;
+    text-align: center;
+}
+
+.form-login input {
+    outline: none;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+
+.form-login .btn {
+    text-transform: uppercase;
+    outline: 0;
+    background: orange;
+    width: 100%;
+    border: none;
+    padding: 15px;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.form-login .btn:hover, .form-login .btn:active {
+    background: green;
+    border: none;
+}
+
+.form-login .bottom-message {
+    margin: 15px 0 0;
+    padding: 5px 0 10px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.form-login .bottom-message a {
+    color: orange;
+    text-decoration: none;
+}
+
+.container {  
+    position: relative; 
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: -webkit-linear-gradient(bottom, #005bea, #00c6fb);
+    position: absolute;
+    opacity: 0.9;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+.images {
+    position: absolute;
+    margin-top: 50px;
+    display: block;
+}
+
+.images img {
+    height: 20%;
+    width: 40%;
+    border: 6px solid white;
+}
+
+.text-center {
+    position: absolute;
+    margin-top: 500px;
+    display: block;
+    width: 100%;
+}
+
+.text-center a {
+    text-decoration: none;
+    font-size: 65px;
+    color: white;
+    border: 4px solid white;
+    background: #0037eae0;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.text-center a:hover {
+    text-decoration: none;
+    color: black;
+    border: 4px solid black;
+}

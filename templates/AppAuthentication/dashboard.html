@@ -1,0 +1,58 @@
+{% extends 'AppAuthentication/base.html' %}
+
+{% block title %}
+Trello App | Dashboard
+{% endblock %}
+
+
+{% block content %}
+<div class="container">
+    <div class="heading">
+        <h1>
+            <u> Trello App</u> | <u> Dashboard</u>
+        </h1>
+    </div>
+
+    
+    <h2>
+        Hello, {{ request.user }}
+    </h2>
+    <a href="{% url 'logout' %}">
+        Logout
+    </a>
+
+
+    <h1>
+        All TaskLists    
+    </h1>
+
+    <ul>
+        {% for list in lists %}
+        <li>
+            {{ list.name }}
+        </li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'newTaskList' %}">
+        Add List
+    </a>
+
+
+    <h1>
+        All Tasks
+    </h1>
+
+    <ul>
+        {% for task in tasks %}
+        <li>
+            {{ task.name }}
+        </li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'newTask' %}">
+        Add Task
+    </a>
+</div>
+{% endblock %}
