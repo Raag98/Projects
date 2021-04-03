@@ -2,17 +2,22 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login as authLogin, logout as authLogout
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
+from django.views.decorators.csrf import csrf_exempt
 from Trello.models import Task, TaskList
 
 # Create your views here.
 
+@csrf_exempt
 def register(request):
-    if request.method == 'POST':
-        form = UserCreationForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('login')
-    return render(request, 'AppAuthentication/register.html')
+    form = UserCreationForm(request.POST)
+    if form.is_valid():
+        form.save()
+        username = form.cleaned_data.get('username')
+        password = form.cleaned_data.get('password1')
+        user = authenticate(username=username, password=password)
+        authLogin(request, user)
+        return redirect('login')
+    return render(request, 'AppAuthentication/register.html', {'form': form})
 
 
 def dashboard(request):
